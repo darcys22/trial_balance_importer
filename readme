@@ -1,0 +1,6 @@
+Converts QBOnline Trial balance to json 
+
+todo:
+
+make this general and import any type of TB in spreadsheet form and export to json
+should be a webapp in angular or something
