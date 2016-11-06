@@ -15,7 +15,7 @@ class TBimport
     @newTB = []
     @TB["Rows"]["Row"].each do |x|
       if x.has_key?("ColData")
-        @newTB << {"Account" => x["ColData"][0]["value"], "Amt" => {"value" => x["ColData"][1]["value"].to_f - x["ColData"][2]["value"].to_f , "Cur" => currency}}
+        @newTB << {"Account" => x["ColData"][0]["value"], "Amt" => {"Value" => x["ColData"][1]["value"].to_f - x["ColData"][2]["value"].to_f , "Cur" => currency}}
       end
     end
     @transaction = {"Prot"=>"Journal", "Txn" => {"Desc" => desc, "Date"=>date, "Postings"=>@newTB}}
